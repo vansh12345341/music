@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Reac, {useState , useContext} from "react";
+import "./App.css";
+import Discover from './components/Discover';
+import { Routes , Route } from "react-router-dom";
+import Header from './components/Header';
+import Sidebar , { SidebarProps } from "./components/Sidebar";
+import Fvaourite from "./Condition/Fvaourite";
+import { AppContext, initialContext , AppProvider} from './AppContext';
+import  useAuth from './auth';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App: React.FC<SidebarProps> = (props: any) => {
+  const { authenticated } = useAuth();
+  
+  const { showFavourite, handleFavouriteClick, handleDiscoverClick } = useContext(AppContext);
+  
+
+
+  const [showFavourites, setShowFavourites] = useState(false);
+
+  const handleFavouritesClick = () => {
+    setShowFavourites(true);
+  };
+
+  const sidebarProps: SidebarProps = {
+    showFavourites: showFavourites,
+    setShowFavourites: setShowFavourites,
+    handleFavouriteClick: function (): void {
+      throw new Error("Function not implemented.");
+    },
+    handleDiscoverClick: function (): void {
+      throw new Error("Function not implemented.");
+    }
+  };
+  return  (
+    <div style={{ display: "flex" }}>
+      <div className="sidebar-container">
+        <Sidebar {...sidebarProps} />
+      </div>
+      <div style={{ marginLeft: "auto" }}>
+        <Header />
+        {showFavourite ? <Fvaourite /> : <Discover />}
+      </div>
     </div>
-  );
-}
+  ) ;
+};
 
 export default App;

@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    margin: 0;
+}
+
+.released-this-week {
+    display: flex;
+    align-items: center;
+  }
+  
+  .released-this-week h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 0.8;
+  }
+  
+  .released-this-week h2 br {
+    display: none;
+  }
+  
+  .released-this-week hr {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+    border: none;
+    margin: 0;
+  }
+
+  
+  
