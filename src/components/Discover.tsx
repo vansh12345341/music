@@ -6,7 +6,7 @@ const Discover = () => {
   return (
     <div >
         <div className="released-this-week" >
-        <p>Released this week </p>
+        <p className="para" style={{marginLeft : '10px' , marginTop : ' 12px' }}>Released this week </p>
         <hr />
         </div>
         <div>

@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
   }
+
+  .para{
+    font-weight: bold;
+  }
   
   .released-this-week h2 {
     font-size: 24px;

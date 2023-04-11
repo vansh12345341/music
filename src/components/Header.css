@@ -8,3 +8,14 @@
    margin: 0;
    width: 100%;
 }
+
+.head {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    transition: font-size 0.3s ease, color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.head:hover {
+    font-size: 70px; /* Increase font size on hover */
+    color: white; /* Change color to white on hover */
+}

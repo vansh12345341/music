@@ -30,7 +30,7 @@ const ShazamAPI: React.FC = () => {
       url: 'https://shazam.p.rapidapi.com/charts/track',
       params: { locale: 'en-US', pageSize: '20', startFrom: '0' },
       headers: {
-        'X-RapidAPI-Key': 'c0998b5c78msh133eeb5d2109c57p14207ajsnf8db9d10f34e',
+        'X-RapidAPI-Key': '3c4fd7ebf9msh5dbc5dfa330108ep1ae92cjsnf80b6d0f1cf3',
         'X-RapidAPI-Host': 'shazam.p.rapidapi.com',
       },
     };
@@ -82,7 +82,7 @@ const ShazamAPI: React.FC = () => {
         url: 'https://shazam.p.rapidapi.com/search',
   params: {term: searchQuery, locale: 'en-US', offset: '0', limit: '5'},
   headers: {
-    'X-RapidAPI-Key': 'c0998b5c78msh133eeb5d2109c57p14207ajsnf8db9d10f34e',
+    'X-RapidAPI-Key': '3c4fd7ebf9msh5dbc5dfa330108ep1ae92cjsnf80b6d0f1cf3',
     'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
   },
       };
@@ -103,13 +103,13 @@ const ShazamAPI: React.FC = () => {
  
 
   return (
-    <><div className="search-container">
-      <input
+    <><div  className="search-container">
+      <input style={{marginLeft:'15px'}}
         type="text"
         placeholder="Search for a song..."
         value={searchQuery}
         onChange={  handleSearch} />
-         <button onClick={ handleApiCall}>Search</button>
+         <button  className ="button" style={{marginLeft:'10px'}} onClick={ handleApiCall}>Search</button>
        
        </div>
     <div className="track-container">

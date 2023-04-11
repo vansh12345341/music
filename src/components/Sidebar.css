@@ -1,75 +1,89 @@
-.sidebar{
+.sidebar {
   text-align: center;
   margin: auto;
 }
-  
-  .sidebar-menu-link {
-    display: block;
-    padding: 10px;
-    margin: 10px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .sidebar-menu-item {
-    position: relative;
-  }
-  
-  .sidebar__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-  }
-  
-  .sidebar__item:not(:last-child) {
-    margin-right: 10px;
-  }
-  
-  .sidebar__item--active {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .sidebar__search {
-    padding: 10px;
-    display: none;
-  }
-  
-  .sidebar__search--active {
-    display: block;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-    }
-  }
 
-  .btn {
-    border: none;
-    background-color: inherit;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.sidebar__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.sidebar__item--active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar__item:hover {
+  border: 2px solid #fff;
+}
+
+.sidebar__item:hover::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.sidebar__search {
+  padding: 10px;
+  display: none;
+}
+
+.sidebar__search--active {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
   }
-  
-  /* On mouse-over */
-  .btn:hover {background: #eee;}
-  
-  .success {color: green;}
-  .info {color: dodgerblue;}
-  .warning {color: orange;}
-  .danger {color: red;}
-  .default {color: black;}
-  
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {
+  background: #eee;
+}
+
+.success {
+  color: green;
+}
+
+.info {
+  color: dodgerblue;
+}
+
+.warning {
+  color: orange;
+}
+
+.danger {
+  color: red;
+}
+
+.default {
+  color: black;
+}

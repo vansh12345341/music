@@ -1,0 +1,43 @@
+.main {
+    display: grid;
+    grid-template-columns: 30% 70%; /* Set grid columns to 30% and 70% */
+    grid-gap: 20px; /* Add gap between columns */
+    margin: 0 auto; /* Center the component horizontally */
+    padding: 20px;
+    width: 70vw; /* Set width to 70% of viewport width */
+  }
+  
+.track-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .track-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .track-card h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .track-card .star {
+    margin-left: auto;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .track-card .star:hover {
+    color: #ffd700; /* Change color to gold on hover */
+  }
+  
+  .track-card .star.clicked {
+    color: #ffd700; /* Change color to gold when clicked */
+  }

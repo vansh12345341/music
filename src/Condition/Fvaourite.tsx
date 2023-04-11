@@ -28,12 +28,12 @@ const Favorite: React.FC = () => {
   };
 
   return (
-    <div>
+    <div  className="main" >
       <h1>Favorite Tracks</h1>
+      
       {Object.entries(favoritesObj).map(([trackKey, isFavorite]) => {
         // Render only if the track is marked as favorite
-        console.log(isFavorite);
-        console.log('nigga');
+     
         return(
           <div className="track-card" key={trackKey}>
           <img src={(isFavorite as any).image?.coverart}  />
@@ -44,6 +44,7 @@ const Favorite: React.FC = () => {
         </div> 
         )
       })}
+     
     </div>
   );
 };
